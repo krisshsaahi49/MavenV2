@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[jQuery]]>
+    </line>
+    <line>
+      <![CDATA[Gecko || 5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36]]>
+    </line>
+    <line>
+      <![CDATA[Mozilla || Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36]]>
+    </line>
+    <line>
+      <![CDATA[Win32 || en-US]]>
+    </line>
+    <line>
+      <![CDATA[true || false]]>
+    </line>
+    <line>
+      <![CDATA[62]]>
+    </line>
+    <line>
+      <![CDATA[]]>
+    </line>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="11428" started-at="2020-08-15T15:05:32Z" finished-at="2020-08-15T15:05:44Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="11428" started-at="2020-08-15T15:05:32Z" finished-at="2020-08-15T15:05:44Z">
+      <class name="selenium22tips.All22Tips">
+        <test-method status="PASS" signature="jsFunc()[pri:0, instance:selenium22tips.All22Tips@e50a6f6]" name="jsFunc" duration-ms="11398" started-at="2020-08-15T20:35:32Z" finished-at="2020-08-15T20:35:44Z">
+          <reporter-output>
+            <line>
+              <![CDATA[jQuery]]>
+            </line>
+            <line>
+              <![CDATA[Gecko || 5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36]]>
+            </line>
+            <line>
+              <![CDATA[Mozilla || Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36]]>
+            </line>
+            <line>
+              <![CDATA[Win32 || en-US]]>
+            </line>
+            <line>
+              <![CDATA[true || false]]>
+            </line>
+            <line>
+              <![CDATA[62]]>
+            </line>
+            <line>
+              <![CDATA[]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- jsFunc -->
+      </class> <!-- selenium22tips.All22Tips -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
