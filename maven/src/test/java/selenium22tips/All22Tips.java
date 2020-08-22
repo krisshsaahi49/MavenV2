@@ -2,6 +2,7 @@ package selenium22tips;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.MalformedURLException;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
@@ -46,7 +47,7 @@ public class All22Tips extends FileUtility {
 		driver.manage().window().maximize();
 		driver.navigate().to("https://jquery.com/");
 		// Open new tab
-		((JavascriptExecutor) driver).executeScript("window1 = window.open('https://www.youtube.com', '_blank')");
+		((JavascriptExecutor) driver).executeScript("window1 = window.open('https://www.youtube.com', '_self')");
 		Thread.sleep(5000);
 		// close tab
 		((JavascriptExecutor) driver).executeScript("window1.close()");
@@ -97,5 +98,16 @@ public class All22Tips extends FileUtility {
 //		((JavascriptExecutor) driver).executeScript("document.body.style.background='#008000';");
 		Reporter.log(((JavascriptExecutor) driver).executeScript("return document.body.style.background;").toString());
 		driver.quit();
+	}
+	
+	@Test
+	public void open() throws MalformedURLException {
+		
+		  WebDriverManager.chromedriver().setup(); driver = new ChromeDriver();
+		  driver.manage().window().maximize();
+//		  driver.navigate().to("http://google.com");
+		 
+		System.out.println(new File("C:\\index.html").toURI().toURL());
+		driver.navigate().to(new File("C:\\index.html").toURI().toURL());
 	}
 }
