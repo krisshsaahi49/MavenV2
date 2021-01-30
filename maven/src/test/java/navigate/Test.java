@@ -25,7 +25,7 @@ public class Test {
 	        System.out.println(prop.getProperty("driver.chrome"));
 	        System.out.println(prop.getProperty("driver.Chrome"));
 	        // Write to properities file
-	        prop.setProperty("driver.chrome", "edge");
+	        prop.setProperty("driver.Chrome", "edge");
 	        output = new FileOutputStream("application.properties");
 	        prop.save(output, "Updated driver.chrome");
 	        System.out.println(prop.getProperty("driver.chrome"));

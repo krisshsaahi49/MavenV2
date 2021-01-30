@@ -3,14 +3,19 @@ package selenium22tips;
 import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
@@ -109,5 +114,20 @@ public class All22Tips extends FileUtility {
 		 
 		System.out.println(new File("C:\\index.html").toURI().toURL());
 		driver.navigate().to(new File("C:\\index.html").toURI().toURL());
+	}
+	
+	@Test
+	public void sample() throws InterruptedException {
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.navigate().to("https://jquery.com/");
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		// close tab
+		WebDriverWait wait = new WebDriverWait(driver, 20);
+		WebElement jquery = driver.findElement(By.xpath("//img[@alt='Support the JS Foundation']"));
+		wait.until(ExpectedConditions.presenceOfElementLocated((By) jquery));
+		jquery.click();
+		
 	}
 }

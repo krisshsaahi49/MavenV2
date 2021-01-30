@@ -1,37 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="18963" started-at="2020-08-20T16:02:30Z" finished-at="2020-08-20T16:02:49Z">
+  <suite name="Default suite" duration-ms="9878" started-at="2020-11-26T02:41:08Z" finished-at="2020-11-26T02:41:18Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="18963" started-at="2020-08-20T16:02:30Z" finished-at="2020-08-20T16:02:49Z">
-      <class name="garbage.Test5">
-        <test-method status="PASS" signature="startBrowser()[pri:0, instance:garbage.Test5@17c1bced]" name="startBrowser" is-config="true" duration-ms="7449" started-at="2020-08-20T21:32:30Z" finished-at="2020-08-20T21:32:38Z">
+    <test name="Default test" duration-ms="9878" started-at="2020-11-26T02:41:08Z" finished-at="2020-11-26T02:41:18Z">
+      <class name="selenium22tips.All22Tips">
+        <test-method status="FAIL" signature="sample()[pri:0, instance:selenium22tips.All22Tips@e50a6f6]" name="sample" duration-ms="9851" started-at="2020-11-26T08:11:08Z" finished-at="2020-11-26T08:11:18Z">
+          <exception class="java.lang.ClassCastException">
+            <message>
+              <![CDATA[org.openqa.selenium.remote.RemoteWebElement cannot be cast to org.openqa.selenium.By]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.ClassCastException: org.openqa.selenium.remote.RemoteWebElement cannot be cast to org.openqa.selenium.By
+	at selenium22tips.All22Tips.sample(All22Tips.java:129)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.ClassCastException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startBrowser -->
-        <test-method status="PASS" signature="navigateBing()[pri:0, instance:garbage.Test5@17c1bced]" name="navigateBing" duration-ms="1671" started-at="2020-08-20T21:32:38Z" finished-at="2020-08-20T21:32:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navigateBing -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:garbage.Test5@17c1bced]" name="closeBrowser" is-config="true" duration-ms="1212" started-at="2020-08-20T21:32:39Z" finished-at="2020-08-20T21:32:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="startBrowser()[pri:0, instance:garbage.Test5@17c1bced]" name="startBrowser" is-config="true" duration-ms="5868" started-at="2020-08-20T21:32:41Z" finished-at="2020-08-20T21:32:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startBrowser -->
-        <test-method status="PASS" signature="navigateGoogle()[pri:0, instance:garbage.Test5@17c1bced]" name="navigateGoogle" duration-ms="1973" started-at="2020-08-20T21:32:46Z" finished-at="2020-08-20T21:32:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navigateGoogle -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:garbage.Test5@17c1bced]" name="closeBrowser" is-config="true" duration-ms="766" started-at="2020-08-20T21:32:48Z" finished-at="2020-08-20T21:32:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- garbage.Test5 -->
+        </test-method> <!-- sample -->
+      </class> <!-- selenium22tips.All22Tips -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -8,12 +8,12 @@ public class DriverFactory {
 		CHROME, FIREFOX;
 	}
 
-	public static GetDriver getDriver(BROWSER browser) {
+	public static GetDriver getDriver(BROWSER browser,WebDriver driver) {
 		switch (browser) {
 		case CHROME:
-			return new ChromeDriver();
+			return new ChromeDriverTest(driver);
 		case FIREFOX:
-			return new FirefoxDriver();
+			return new FirefoxDriver(driver);
 		default:
 			System.out.println("No broswwer found");
 			break;

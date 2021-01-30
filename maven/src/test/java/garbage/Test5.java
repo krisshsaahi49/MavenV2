@@ -17,8 +17,8 @@ public class Test5 {
 
 	@BeforeMethod
 	public void startBrowser() {
-		GetDriver getDriver = DriverFactory.getDriver(BROWSER.CHROME);
-		driver = getDriver.startDriver(driver);
+		GetDriver getDriver = DriverFactory.getDriver(BROWSER.FIREFOX,driver);
+		driver = getDriver.startDriver();
 	}
 
 	@Test
