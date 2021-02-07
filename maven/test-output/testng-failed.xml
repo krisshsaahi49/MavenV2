@@ -3,20 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]" parallel="none">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="selenium22tips.All22Tips">
+      <class name="selenium.cookies.FacebookLogin">
         <methods>
-          <include name="sample"/>
+          <include name="writeCookie"/>
         </methods>
-      </class> <!-- selenium22tips.All22Tips -->
+      </class> <!-- selenium.cookies.FacebookLogin -->
     </classes>
   </test> <!-- Default test -->
-  <test name="Default test(failed)" parallel="none">
-    <classes>
-      <class name="selenium22tips.All22Tips">
-        <methods>
-          <include name="sample"/>
-        </methods>
-      </class> <!-- selenium22tips.All22Tips -->
-    </classes>
-  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
