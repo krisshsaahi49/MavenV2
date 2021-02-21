@@ -14,6 +14,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -29,8 +31,8 @@ public class FacebookLogin {
 		driver.get("https://www.facebook.com/");
 
 		// Input Email id and Password If you are already Register
-		driver.findElement(By.name("email")).sendKeys();
-		driver.findElement(By.name("pass")).sendKeys("");
+		driver.findElement(By.name("email")).sendKeys("krisshsaahi49@gmail.com");
+		driver.findElement(By.name("pass")).sendKeys("Annable@49");
 		driver.findElement(By.name("login")).click();
 
 		// create file named Cookies to store Login Information
@@ -55,17 +57,17 @@ public class FacebookLogin {
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
-		driver.quit();
+		driver.close();
 	}
 
 	@Test
 	public void writeCookie() {
 
 		WebDriver driver;
-		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
+		WebDriverManager.firefoxdriver().setup();
+//		WebDriverManager.chromedriver().setup();
+		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.get("https://www.facebook.com/");
 		try {
 
 			File file = new File("Cookies_facebook.data");
@@ -91,14 +93,14 @@ public class FacebookLogin {
 					Boolean isSecure = new Boolean(token.nextToken()).booleanValue();
 					Cookie ck = new Cookie(name, value, domain, path, expiry, isSecure);
 					System.out.println(ck);
-//					driver.get("https://www.facebook.com/");
+					driver.get("https://www.facebook.com/");
 					driver.manage().addCookie(ck); // This will add the stored cookie to your current session
 				}
 			}
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
-		driver.get("https://www.facebook.com/");
+		driver.navigate().refresh();
 //		driver.quit();
 	}
 }
