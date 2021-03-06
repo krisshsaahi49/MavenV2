@@ -38,6 +38,10 @@ public class Hierarchy {
 	public void test1() {
 		System.out.println("Test");
 	}
+	@Test
+	public void test2() {
+		System.out.println("Test 2");
+	}
 
 	@AfterTest
 	public void afterTest() {

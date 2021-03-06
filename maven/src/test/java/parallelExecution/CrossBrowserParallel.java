@@ -19,7 +19,7 @@ import lib.Wait;
 
 public class CrossBrowserParallel {
 
-	public WebDriver driver;
+	public static WebDriver driver;
 
 	@Parameters("browser")
 	CrossBrowserParallel(String browser) {

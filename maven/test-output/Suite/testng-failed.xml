@@ -1,12 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]">
-  <listeners>
-    <listener class-name="com.TestngListners.IAnnotationTransform.FactoryAnnotationTransformerListener"/>
-  </listeners>
-  <test name="Test">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <parameter name="browser" value="edge"/>
+  <test name="Chrometest">
+    <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.TestngListners.IAnnotationTransform.FactoryAnnotationTransformerExample"/>
+      <class name="navigate.CrossbrowserParrallel"/>
     </classes>
-  </test> <!-- Test -->
+  </test> <!-- Chrometest -->
+  <test name="Firefoxtest">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="navigate.CrossbrowserParrallel"/>
+    </classes>
+  </test> <!-- Firefoxtest -->
+  <test name="Edgetest">
+    <parameter name="browser" value="edge"/>
+    <classes>
+      <class name="navigate.CrossbrowserParrallel"/>
+    </classes>
+  </test> <!-- Edgetest -->
+  <test name="Edgetest(failed)" parallel="tests">
+    <parameter name="browser" value="edge"/>
+    <classes>
+      <class name="navigate.CrossbrowserParrallel">
+        <methods>
+          <include name="setUpMethod"/>
+          <include name="setUpMethod"/>
+          <include name="setUpMethod"/>
+          <include name="test1"/>
+          <include name="teardown"/>
+          <include name="teardown"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- navigate.CrossbrowserParrallel -->
+    </classes>
+  </test> <!-- Edgetest(failed) -->
+  <test name="Chrometest(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="navigate.CrossbrowserParrallel">
+        <methods>
+          <include name="setUpMethod"/>
+          <include name="setUpMethod"/>
+          <include name="setUpMethod"/>
+          <include name="test1"/>
+          <include name="teardown"/>
+          <include name="teardown"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- navigate.CrossbrowserParrallel -->
+    </classes>
+  </test> <!-- Chrometest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -22,7 +22,7 @@ import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class CrossbrowserParrallel {
-	WebDriver driver;
+	static WebDriver driver;
 	
 	@BeforeClass
 	@Parameters("browser")
@@ -73,9 +73,12 @@ public class CrossbrowserParrallel {
 		driver.get("https://bing.com");
 		System.out.println("Page ttile " + driver.getTitle());
 		Reporter.log("Page ttile " + driver.getTitle());
+		driver.get("https://google.com");
+		System.out.println("Page ttile " + driver.getTitle());
+		Reporter.log("Page ttile " + driver.getTitle());
 	}
 	
-	@Test(enabled=false)
+	@Test(enabled=false,dependsOnMethods = "test1")
 	public void test2() {
 		driver.get("https://google.com");
 		System.out.println("Page ttile " + driver.getTitle());

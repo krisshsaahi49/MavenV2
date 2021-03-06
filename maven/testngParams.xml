@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="Test1">
+		<parameter name="name" value="krish" />
+		<parameter name="age" value="25" />
+		<parameter name="birthPlace" value="TPG" />
+		<classes>
+			<class name="com.Tesng.Annotations.Parameterizarion">
+				<methods>
+					<include name="param1"></include>
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- Test -->
+
+	<test thread-count="5" name="Test2">
+		<parameter name="name" value="Saahi" />
+		<parameter name="age" value="26" />
+		<parameter name="birthPlace" value="HYD" />
+		<classes>
+			<class name="com.Tesng.Annotations.Parameterizarion">
+				<methods>
+					<include name="param2"></include>
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

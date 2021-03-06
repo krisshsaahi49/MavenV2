@@ -1,13 +1,14 @@
 package garbage;
 
+import org.testng.annotations.Test;
+
 public class Test7{
 	
-	public void a() {
-		System.out.println("I am overriding method");
-	}
-	
-	public static void main(String[] args) {
-		Main m = new Main3();
-		m.a();
+	@Test
+	public void set() {
+		String[] s = new String[10];
+		for(int i=0;i<10;i++) {
+			s[i] = "a";
+		}
 	}
 }
