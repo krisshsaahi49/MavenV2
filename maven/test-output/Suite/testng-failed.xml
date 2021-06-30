@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="driver.chrome" value="webdriver.chrome.driver"/>
+  <parameter name="Myname" value="lokesh"/>
+  <parameter name="chrome.path" value="./server/chromedriver_v85.exe"/>
   <listeners>
-    <listener class-name="com.TestngListners.IAnnotationTransform.FactoryAnnotationTransformerListener"/>
+    <listener class-name="com.java.Parametrization.PropertyInjectorListener"/>
   </listeners>
-  <test name="Test">
+  <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.TestngListners.IAnnotationTransform.FactoryAnnotationTransformerExample"/>
+      <class name="com.java.Parametrization.ParameterizationGarbage">
+        <methods>
+          <include name="paramPropertieFile"/>
+        </methods>
+      </class> <!-- com.java.Parametrization.ParameterizationGarbage -->
     </classes>
-  </test> <!-- Test -->
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -16,6 +16,7 @@ public class WebAppStatus {
 		try {
 			status = connection.getResponseCode();
 			System.out.println("STATUS : "+status);
+			System.out.println(connection.getResponseMessage());
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			System.err.println("DNS NOT FOUND");

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<parameter name="myName" value="krissh"></parameter>
+	<parameter name="myAge" value="26"></parameter>
+	<test thread-count="5" name="Test">
+		<parameter name="myName" value="./application.properites"/>
+		<parameter name="myAge" value="24"/>
+		<classes>
+			<class name="garbage.ParameterizationGarbage" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

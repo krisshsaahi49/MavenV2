@@ -9,19 +9,8 @@ import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import testAutomation.POM.pages.LoginPageFactory;
 
-public class GuruLoginFactory {
-
-	WebDriver driver;
-	LoginPageFactory factory;
+public class GuruLoginFactory extends BaseTest{
 	
-	@BeforeSuite
-	public void setUp() {
-		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
-		factory = new LoginPageFactory(driver);
-
-		driver.get("http://demo.guru99.com/V4/");
-	}
 	
 	@Test
 	public void login() {
@@ -30,8 +19,5 @@ public class GuruLoginFactory {
 
 	}
 	
-	@AfterSuite
-	public void tearDown() {
-		driver.quit();
-	}
+	
 }

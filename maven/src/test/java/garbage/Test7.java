@@ -7,7 +7,13 @@ public class Test7{
 	}
 	
 	public static void main(String[] args) {
-		Main m = new Main3();
-		m.a();
+		
+		String str = "abcde";
+		
+		for(int i=0;i<str.length();i++){
+			for(int j=i+1;j<=str.length();j++) {
+				System.out.println(str.substring(i,j));
+			}
+		}
 	}
 }

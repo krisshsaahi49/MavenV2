@@ -3,13 +3,13 @@ package com.TestngListners.IAnnotationTransform;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 
-import org.testng.IAnnotationTransformer2;
+import org.testng.IAnnotationTransformer;
 import org.testng.annotations.IConfigurationAnnotation;
 import org.testng.annotations.IDataProviderAnnotation;
 import org.testng.annotations.IFactoryAnnotation;
 import org.testng.annotations.ITestAnnotation;
 
-public class DataProviderAnnotationTransformerListener implements IAnnotationTransformer2 {
+public class DataProviderAnnotationTransformerListener implements IAnnotationTransformer {
 
 	@Override
 	public void transform(IDataProviderAnnotation annotation, Method method) {

@@ -15,7 +15,7 @@ public class ChromeDriverTest implements GetDriver {
 	public WebDriver startDriver() {
 		// TODO Auto-generated method stub
 		WebDriverManager.chromedriver().setup();
-		WebDriverManager.chromedriver().clearCache();
+		WebDriverManager.chromedriver().clearDriverCache();
 		driver = new org.openqa.selenium.chrome.ChromeDriver();
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();

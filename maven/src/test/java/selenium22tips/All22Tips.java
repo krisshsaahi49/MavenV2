@@ -13,6 +13,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -129,5 +130,26 @@ public class All22Tips extends FileUtility {
 		wait.until(ExpectedConditions.presenceOfElementLocated((By) jquery));
 		jquery.click();
 		
+	}
+	
+	@Test
+	public void a() throws InterruptedException {
+		WebDriverManager.chromedriver().setup();
+		ChromeOptions opt = new ChromeOptions();
+		opt.addArguments("start-maximized");
+		WebDriver driver = new ChromeDriver(opt);
+		driver.get("https://bing.com");
+//		((JavascriptExecutor) driver).executeScript("window1 = window.open('https://bing.com');");
+//		((JavascriptExecutor) driver).executeScript("window1.close()");
+		((JavascriptExecutor) driver).executeScript("document.getElementById('sb_form_q').value='Abha_Rathour'");  // send keys using js
+		WebElement search = driver.findElement(By.id("sb_form_q"));
+		WebElement maginifier = driver.findElement(By.xpath("//label[@class='search icon tooltip']"));
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();",maginifier);
+		((JavascriptExecutor) driver).executeScript("history.go(0)");
+		WebElement help = driver.findElement(By.id("sb_help"));
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",help);
+		Thread.sleep(2000);
+		
+		driver.close();
 	}
 }

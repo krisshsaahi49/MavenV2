@@ -1,4 +1,5 @@
-  <project xmlns="http://maven.apache.org/POM/4.0.0"
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
@@ -8,22 +9,28 @@
 	<name>Maven</name>
 
 	<dependencies>
+
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
-			<version>6.9.10</version>
+			<version>7.3.0</version>
 		</dependency>
 
 		<dependency>
 			<groupId>io.github.bonigarcia</groupId>
 			<artifactId>webdrivermanager</artifactId>
-			<version>4.0.0</version>
+			<version>4.3.1</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
 			<version>3.141.59</version>
+		</dependency>
+		<dependency>
+			<groupId>io.appium</groupId>
+			<artifactId>java-client</artifactId>
+			<version>7.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.poi</groupId>
@@ -41,17 +48,9 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>3.0.0-M5</version>
 				<configuration>
-					<!-- <properties>
-						<property>
-							<name>usedefaultlisteners</name>
-							<value>false</value>
-						</property>
-						<property>
-							<name>listener</name>
-							<value>org.uncommons.reportng.HTMLReporter,
-								org.uncommons.reportng.JUnitXMLReporter</value>
-						</property>
-					</properties> -->
+					<!-- <properties> <property> <name>usedefaultlisteners</name> <value>false</value> 
+						</property> <property> <name>listener</name> <value>org.uncommons.reportng.HTMLReporter, 
+						org.uncommons.reportng.JUnitXMLReporter</value> </property> </properties> -->
 					<suiteXmlFiles>
 						<suiteXmlFile>testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
@@ -68,20 +67,10 @@
 				</configuration>
 			</plugin>
 			<!-- To copy dependencies to target folder -->
-			<!-- <plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-dependency-plugin</artifactId>
-				<version>3.1.2</version>
-				<executions>
-					<execution>
-						<id>copy-dependencies</id>
-						<phase>package</phase>
-						<goals>
-							<goal>copy-dependencies</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin> -->
+			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-dependency-plugin</artifactId> 
+				<version>3.1.2</version> <executions> <execution> <id>copy-dependencies</id> 
+				<phase>package</phase> <goals> <goal>copy-dependencies</goal> </goals> </execution> 
+				</executions> </plugin> -->
 		</plugins>
 	</build>
 

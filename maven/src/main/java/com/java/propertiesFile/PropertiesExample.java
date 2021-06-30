@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Properties;
 import java.util.Set;
 
@@ -20,6 +21,9 @@ public class PropertiesExample {
 			props.setProperty("db", "com.oracle");
 			System.out.println(props.getProperty("driver.chrome"));
 			props.setProperty("db", "com.oracle");
+			System.out.println(props.getProperty("db"));
+			System.out.println(props.getProperty("caps"));
+			System.out.println(Arrays.asList("abc","bcd"));
 			input.close();
 			/*
 			 * FileOutputStream output = new FileOutputStream("application.properties");
